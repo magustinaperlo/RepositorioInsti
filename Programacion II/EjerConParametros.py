@@ -38,9 +38,29 @@ print("Ejercicio Agenda de Clientes")
 cantidadClientes= int(input("Ingresar cantidad de clientes a agregar: "))
 print(agenda(cantidadClientes))
 
+#sugerencia : 
+
+def agenda(clientes):
+    listaContacto = []
+    for i in range(clientes):
+        nombre = input("Ingresa un nombre: ")
+        apellido = input("Ingresa un apellido: ")
+        numtel = int(input("Ingresa un número de teléfono: "))
+        contacto = "El nombre del cliente es: " + nombre + " - " + "El apellido es: " + apellido + " - " + "El número de teléfono es: " + str(numtel)
+        listaContacto.append(contacto)
+    return listaContacto
+
+print("Ejercicio Agenda de Clientes")
+cantidadClientes = int(input("Ingresar cantidad de clientes a agregar: "))
+print(agenda(cantidadClientes))
+
+
+
 
 def construirUnaMatriz(filas, columnas):
-    print("Ejercicio Contrauir Matriz")
+    #print("Ejercicio Contrauir Matriz")
+    print("Ejercicio Construir Matriz")
+    #cuidado al escribir se supone que el usuario debe entendernos no descifrarnos !
     mat=[]
     num=0
     suma=0
@@ -76,3 +96,23 @@ def mayorMenor(contador):
 El numero minimo es:  {menor} """)
 print("Ejercicio MayorMenor")    
 mayorMenor(contador=int(input("Ingresa la cantidad de numeros que quieras verificar:  ")))
+
+#sugerencia :
+
+def mayorMenor(contador):
+    cont = 0
+    max_num = 0
+    min_num = 0
+    while cont < contador:
+        num = int(input("Ingresa un número: "))
+        if cont == 0:
+            max_num = num
+            min_num = num
+        if num > max_num:
+            max_num = num
+        if num < min_num:
+            min_num = num
+        cont += 1
+    print(f"El número máximo ingresado es: {max_num}")
+    print(f"El número mínimo ingresado es: {min_num}")
+
