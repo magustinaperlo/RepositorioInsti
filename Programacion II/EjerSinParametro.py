@@ -28,6 +28,24 @@ def lecturaLista ():
 
 lecturaLista()
 
+#sugerencia
+
+def lecturaLista():
+    lista = [68, 69, 10, 11, 33, 56, 90]  # Lista cargada con antelación
+    lista_par = []
+    lista_impar = []
+    for num in lista:  # Recorre la lista y guarda los números pares e impares en otras dos listas
+        if num % 2 == 0:
+            lista_par.append(num)
+        else:
+            lista_impar.append(num)
+
+    print("Los números pares son: " + str(lista_par))
+    print("Los números impares son: " + str(lista_impar))
+
+lecturaLista()
+
+
 def listaDivisores():
 
     lista= [64,8,10,2,33,11,90,9] #(lista cargada con antelacion)
@@ -48,16 +66,18 @@ def textoXD ():
     print(msj)
 textoXD ()
 
-def multiplisdelUnoalNueve():
-    multiplos=0
-    listanum=[1,2,3,4,5,6,7,8,9,10]
-    for i in listanum:
-        cont=1
+#def multiplisdelUnoalNueve(): 
+def multiplosDelUnoAlNueve():
+    #multiplos=0
+    listaNum=[1,2,3,4,5,6,7,8,9,10]
+    for i in listaNum:
+        #cont=1
         listaMultiplos=[]
-        for k in range(0,10):
-            multiplos= i * cont
+        for k in range(1,11):
+            # multiplos= i * cont
+            multiplos = i * k
             listaMultiplos.append(multiplos)
-            cont+=1
+            #cont+=1
         print("Las tablas del:  " + str(i) +"\n" +str(listaMultiplos))
-multiplisdelUnoalNueve()
+multiplosDelUnoAlNueve()
 
