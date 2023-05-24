@@ -12,7 +12,22 @@ while num != 0:
     for i in meses:
         if meses.index[i] == (num):
             print[i]
-print("Fin del programa")    
+print("Fin del programa")   
+
+#sugerencia 
+meses = ("", "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre")
+
+num = 1
+while num != 0:
+    num = int(input("Escriba un numero: "))
+    if num == 0:
+        break
+    if num > len(meses) - 1 or num < 1:
+        print("Error. El numero debe estar entre 1 y", len(meses) - 1)
+    else:
+        print(meses[num])
+print("Fin del programa")
+
 
 
 
@@ -50,6 +65,17 @@ for i in range(0,len(numeros)):
         menor=numeros[i]
 print("El numero maximo ingresado es:  " + str(max) + "  -  " + "El numero minimo ingresado es:  "+ str(menor))
 
+#sugerencia : 
+numeros = (1, 5, 6, 9, 4, 2, 3, 7, 8, 10, 23, 21, -40, 39, 50, 200)
+mayor = menor = numeros[0]
+for num in numeros:
+    if num > mayor:
+        mayor = num
+    if num < menor:
+        menor = num
+print("El numero maximo ingresado es:", mayor)
+print("El numero minimo ingresado es:", menor)
+
 
 
 
@@ -69,4 +95,17 @@ while 1:
         print("indice fuera de parametros")
     else:
         print(tupla[indice])
+#sugerencia 
+        
+        
+tupla = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
+while True:
+    indice = int(input("Ingresa un índice del 1 al 10: "))
+    if indice < 1 or indice > 10:
+        print("Índice fuera de rango")
+    else:
+        try:
+            print(tupla[indice - 1])
+        except IndexError:
+            print("El índice no existe en la tupla")
